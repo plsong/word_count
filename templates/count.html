@@ -1,8 +1,12 @@
-<h1>统计结果: 文本总共 {{ count }} 字</h1>
+<h1>统计结果</h1>>
 <a href="..">返回首页</a>
 <br>
-<h2>输入的文本为</h2>
+<h2>文本总共 {{ count }} 字</h2>
+<h2>你的文本</h2>
 {{ text }}
 <br>
-<br>
-{{ worddict }}
+<h2>出现频率统计</h2>
+{% for word,count in sorteddict  %}
+    {{word  }}-{{ count }}
+    <br>
+{% endfor %}
